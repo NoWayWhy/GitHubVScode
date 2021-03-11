@@ -20,11 +20,14 @@ class Simple_drawing_window3(QWidget):
         p.setPen(QColor(0,0,0))
         p.setBrush(QColor(0,0,0))
         p.drawPie(50,150,100,100,0,90*32)
+
+        p.drawPixmap(QRect(200,100,320,320), self.rabbit)
+        p.end()
         
 def main():
     app = QApplication(sys.argv)
 
-    w = Simple_drawing_window()
+    w = Simple_drawing_window3()
     w.show()
 
     return app.exec_()
