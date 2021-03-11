@@ -19,3 +19,8 @@ class Canvas(QWidget):
         for point in self.points:
             p.drawPie(point.x(), point.y(), 10, 10, 0, 180 * 32)
         p.end()
+    
+    def clear_drawing(self):
+        self.points = []
+        self.update()
+        
